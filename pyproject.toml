@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "patwhoami"
+version = "0.1.0"
+description = "Reveal the nature of patent assignees."
+authors = ["Cyril Verluise <cyril.verluise@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+#[tool.poetry.scripts]
+# patwhoami = "patwhoami.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
