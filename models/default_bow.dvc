@@ -1,0 +1,5 @@
+outs:
+- md5: 4666238086998475ebf36eb05687bf4b.dir
+  size: 12905406
+  nfiles: 19
+  path: default_bow

@@ -1,0 +1,5 @@
+outs:
+- md5: fdc2a9e6dc553a41e07508ec6da756d0.dir
+  size: 7738631
+  nfiles: 18
+  path: default_cnn
