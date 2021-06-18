@@ -1,0 +1,4 @@
+outs:
+- md5: 55ce73b871e9732a6f6240338e41afc7
+  size: 65020
+  path: test.spacy
