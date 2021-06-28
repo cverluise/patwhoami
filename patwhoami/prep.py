@@ -84,5 +84,44 @@ def to_spacy(file: Path, dest: Path, language: str = "xx") -> None:
     doc_bin.to_disk(dest)
 
 
+@app.command()
+def active_training(file: Path, dest: Path):
+    """
+    Return a subset of examples for which the classifier exhibits low certainty
+
+    Arguments:
+        file: out of sample data file path (.jsonl)
+        dest: active training data file path (.jsonl)
+
+    **Usage:**
+        ```shell
+        patwhoami prep active-training data/irl_pred.jsonl data/active_training.jsonl
+        ```
+    """
+    df = pd.read_json(file, lines=True)
+    df_active = df[df.max(1) < 0.6]
+    df_active.append(
+        df.query(
+            ".4<=RES_INSTITUTE<=.5 and UNIVERSITY<RES_INSTITUTE and HOSPITAL<RES_INSTITUTE and OTHER<RES_INSTITUTE"
+        )
+    )
+    df_active.append(
+        df.query(
+            ".4<=UNIVERSITY<=.5 and RES_INSTITUTE<UNIVERSITY and HOSPITAL<UNIVERSITY and OTHER<UNIVERSITY"
+        )
+    )
+    df_active.append(
+        df.query(
+            ".4<=HOSPITAL<=.5 and RES_INSTITUTE<HOSPITAL and UNIVERSITY<HOSPITAL and OTHER<HOSPITAL"
+        )
+    )
+    df_active.append(
+        df.query(
+            ".4<=OTHER<=.5 and RES_INSTITUTE<OTHER and UNIVERSITY<OTHER and HOSPITAL<OTHER"
+        )
+    )
+    df_active.drop_duplicates().to_json(dest, orient="records", lines=True)
+
+
 if __name__ == "__main__":
     app()
