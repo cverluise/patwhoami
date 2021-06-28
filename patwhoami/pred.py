@@ -23,7 +23,7 @@ def cats(file: Path, model: Path):
     with open(file, "r") as lines:
         for line in lines:
             line = json.loads(line)
-            doc = nlp(line["text"])
+            doc = nlp(line["text"].lower())
             line.update(doc.cats)
             typer.echo(json.dumps(line))
 
