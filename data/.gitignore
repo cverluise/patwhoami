@@ -5,3 +5,4 @@
 /train.spacy
 /irl.jsonl
 /irl_pred.jsonl
+/active_training.jsonl
