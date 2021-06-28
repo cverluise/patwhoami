@@ -15,7 +15,7 @@ country\_code   | University/graduate school | Research institute/agency | Hospi
 ---|---|---|---|---
 US JP DE KR CN FR GB TW CH IT SU NL SE CA ES   |  [Lists of universities and colleges by country](https://en.wikipedia.org/wiki/Category:Lists_of_universities_and_colleges_by_country)    |  [Lists of research institutes by country](https://en.wikipedia.org/wiki/Category:Research_institutes_by_country)    |  [Lists of hospitals by country](https://en.wikipedia.org/wiki/Category:Lists_of_hospitals_by_country)    |  [Lists of companies by country](https://en.wikipedia.org/wiki/Category:Lists_of_companies_by_country) [List of Nobel laureates by country](https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country)
 
-We complete our list with other data:
+We complete our list with other data (or remplace wiki data when the title is tagged with * symbol):
 
 country\_code   | University/graduate school | Research institute/agency | Hospital | Other
 ---|---|---|---|---
@@ -43,7 +43,18 @@ ES  | | | | [Research institutes in Andalusia](https://en.wikipedia.org/wiki/Cat
 
 | `country_code`/`cat`   |    `OTHER` |   `RES_INSTITUTE` |   `UNIVERSITY` |   `HOSPITAL` |
 |:---------------|-----:|----:|----:|----:|
-| `DE`             |  821 | 105 | 427 |  79 |
-| `FR`             |  770 |  53 | 147 | 124 |
-| `GB`             |  895 |  67 | 264 | 771 |
-| `US`             | 1067 | 295 | 406 | 612 |
+| `US`             | 1067 | 295 | 2511 | 612 |
+| `JP`             | 768 | 53 | 947 | 303 |
+| `DE`             | 821 | 105 | 427 | 79 |
+| `KR`             | 411 |  36 | 514 | 56 |
+| `CN`             | 750 | 61  | 181 | 223 |
+| `FR`             | 770 |  53 | 147 | 124 |
+| `GB`             | 895 |  67 | 264 | 771 |
+| `TW`             | 221 | 24  | 147 | 64 |
+| `CH`             | 266 | 81 | 72 | 58 |
+| `IT`             | 401 | 52 | 109 | 88 |
+| `SU`             | 220 |  162 | 634 | 28 |
+| `NL`             | 132 |  68 | 95 | 131 |
+| `SE`             | 336 | 41 | 55 | 103 |
+| `CA`             | 538 | 126 | 96 | 219 |
+| `ES`             | 123 | 72  | 88 | 214 |
