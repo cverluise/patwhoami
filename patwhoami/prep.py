@@ -51,9 +51,9 @@ def to_spacy(file: Path, dest: Path, language: str = "xx") -> None:
     Return a CSV training data (text, cat, country_code) as a spaCy 3 file which can be ingested directly
 
     Arguments:
-        file: training data file path
-        dest:
-        language:
+        file: training data file path (csv)
+        dest: destination file path (.spacy)
+        language: spacy 2 letter code language (xx for multi-language)
 
     **Usage:**
         ```shell
