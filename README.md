@@ -29,8 +29,13 @@ aymann mhammedi : OTHER 1.0
 gdf suez : OTHER 1.0
 max planck institute : RES_INSTITUTE 1.0
 new york hospital : HOSPITAL 1.0
-klinikum an der isar : HOSPITAL 0.93
+klinikum an der isar : HOSPITAL 0.97
 boston college : UNIVERSITY 1.0
-deutsches zentrum für luft und raumfahrt : RES_INSTITUTE 0.81
-china academy of science : RES_INSTITUTE 0.86
+deutsches zentrum für luft und raumfahrt : OTHER 0.3
+china academy of science : RES_INSTITUTE 0.74
 ````
+
+## patwhoami X HuggingFace hub
+
+- View the model: https://huggingface.co/cverluise/xx_cat_pateexx_md. NB: texcat inference API not yet supported for spacy models
+- Install the model: `pip install https://huggingface.co/cverluise/xx_cat_pateexx_md/resolve/main/xx_cat_pateexx_md-any-py3-none-any.whl`
