@@ -395,6 +395,28 @@ pyparsing = "*"
 full = ["numpy", "ply"]
 
 [[package]]
+name = "huggingface-hub"
+version = "0.0.12"
+description = "Client library to download and publish models on the huggingface.co hub"
+category = "dev"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.dependencies]
+filelock = "*"
+packaging = ">=20.9"
+requests = "*"
+tqdm = "*"
+typing-extensions = "*"
+
+[package.extras]
+all = ["pytest", "black (>=20.8b1)", "isort (>=5.5.4)", "flake8 (>=3.8.3)"]
+dev = ["pytest", "black (>=20.8b1)", "isort (>=5.5.4)", "flake8 (>=3.8.3)"]
+quality = ["black (>=20.8b1)", "isort (>=5.5.4)", "flake8 (>=3.8.3)"]
+testing = ["pytest"]
+torch = ["torch"]
+
+[[package]]
 name = "identify"
 version = "2.2.10"
 description = "File identification library for Python"
@@ -979,6 +1001,20 @@ th = ["pythainlp (>=2.0)"]
 transformers = ["spacy-transformers (>=1.0.1,<1.1.0)"]
 
 [[package]]
+name = "spacy-huggingface-hub"
+version = "0.0.3"
+description = "Quickly push your spaCy pipelines to the Hugging Face Hub"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+huggingface-hub = "0.0.12"
+PyYAML = "*"
+typer = ">=0.3.0,<0.4.0"
+wasabi = ">=0.8.1,<1.1.0"
+
+[[package]]
 name = "spacy-legacy"
 version = "3.0.6"
 description = "Legacy registered functions for spaCy backwards compatibility"
@@ -1182,7 +1218,7 @@ test = ["zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7ed19e4149e39b012947b0d6c7fb3185dcc5201c910becda21773753fb500f8d"
+content-hash = "c3b506afe7ebd0e420ad2d542a6317ec1b0e7f282435055cfc91b01cb341cde6"
 
 [metadata.files]
 appdirs = [
@@ -1397,6 +1433,10 @@ grandalf = [
     {file = "grandalf-0.6-py3-none-any.whl", hash = "sha256:357946e2fd35fc92c327cf3c091acc5aef93e0c74c60fed0a727d827ab3b1272"},
     {file = "grandalf-0.6-py3.5.egg", hash = "sha256:aa985ba9992aba30e9c09d3cd9574054268b74ff2d34ced68aa9e7ca698724b0"},
     {file = "grandalf-0.6.tar.gz", hash = "sha256:7471db231bd7338bc0035b16edf0dc0c900c82d23060f4b4d0c4304caedda6e4"},
+]
+huggingface-hub = [
+    {file = "huggingface_hub-0.0.12-py3-none-any.whl", hash = "sha256:5c82ff96897a72e1ed48a94c1796686f120dea05888200522f3994f130c12e6a"},
+    {file = "huggingface_hub-0.0.12.tar.gz", hash = "sha256:661b17fab0c475276fd71603ee7e16c3b3d1d6e812e1b29f40144f64d361e59d"},
 ]
 identify = [
     {file = "identify-2.2.10-py2.py3-none-any.whl", hash = "sha256:18d0c531ee3dbc112fa6181f34faa179de3f57ea57ae2899754f16a7e0ff6421"},
@@ -1838,6 +1878,10 @@ spacy = [
     {file = "spacy-3.0.6-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:0d688674128a281fb5022a3ff736b635168b4489622731d013779662872bb18f"},
     {file = "spacy-3.0.6-cp39-cp39-win_amd64.whl", hash = "sha256:dad95d94b7c3263e364170d397e9a83c1ec2b64f6bc771e2511a662d537649b3"},
     {file = "spacy-3.0.6.tar.gz", hash = "sha256:5628ab89f1f568099c880b12a9c37f4ece29ab89260660cfdf728c02711879c5"},
+]
+spacy-huggingface-hub = [
+    {file = "spacy-huggingface-hub-0.0.3.tar.gz", hash = "sha256:333dea5c22c97273fa3748ed9d107eeaeb9f30f57b8af9cefcd37fc92fb41990"},
+    {file = "spacy_huggingface_hub-0.0.3-py3-none-any.whl", hash = "sha256:96a8db6e7bba91e052c768d9c99c595c21b63ff40e1bcf50b7402dcb4a9de8ed"},
 ]
 spacy-legacy = [
     {file = "spacy-legacy-3.0.6.tar.gz", hash = "sha256:76d102a840cae96dbcc2637e5baca0c0c001e6c43b5879112c6b4431eb0efbdb"},
