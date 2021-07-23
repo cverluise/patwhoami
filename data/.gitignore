@@ -6,3 +6,5 @@
 /irl.jsonl
 /irl_pred.jsonl
 /active_training.jsonl
+/active_training.corr.csv
+/active_training.corr.jsonl
