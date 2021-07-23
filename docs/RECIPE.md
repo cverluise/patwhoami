@@ -26,3 +26,15 @@ patwhoami pred cats data/irl.jsonl models/default_cnn/model-best >> data/irl_pre
 ```shell
 patwhoami prep active-training data/irl_pred.jsonl data/active_training.jsonl
 ```
+
+## To hub
+
+```shell
+# eval models + model selection
+patwhoami eval spacy-model "models/*/model-best/meta.json"
+
+huggingface-cli login
+python -m spacy package models/default_cnn/model-best ./models --build wheel --name cat_pateexx_md --version 1.0.0
+cd models/xx_cat_pateexx_md-1.0.0/dist/
+python -m spacy huggingface-hub push xx_cat_pateexx_md-1.0.0-py3-none-any.whl
+```
